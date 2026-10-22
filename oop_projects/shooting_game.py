@@ -48,3 +48,9 @@ class Player(Character):
             print(f"❤️ Current HP: {self.health}")
         else:
             print("❌ No potions left!")
+
+class Enemy(Character):
+    """Enemy inherits from Character but has specific monster types."""
+    def __init__(self, name, health, base_attack, species):
+        super().__init__(name, health, base_attack)
+        self.species = species
