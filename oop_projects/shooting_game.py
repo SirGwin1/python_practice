@@ -54,3 +54,16 @@ class Enemy(Character):
     def __init__(self, name, health, base_attack, species):
         super().__init__(name, health, base_attack)
         self.species = species
+
+# --- THE GAME LOOP ---
+if __name__ == "__main__":
+    print("--- Welcome to OOP Python RPG ---")
+    
+    # 1. Create objects
+    hero = Player(name="Arthur", health=100, base_attack=15, role="Knight")
+    goblin = Enemy(name="Grog", health=60, base_attack=10, species="Goblin")
+    
+    sword = Weapon(name="Excalibur", bonus_damage=10)
+    hero.equip_weapon(sword)
+    
+    print("\n--- The Battle Begins! ---")
